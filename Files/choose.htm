@@ -28,7 +28,7 @@
         };
 
         function generateReceipt() {
-            var receiptText = "Спасибо за покупку!\n";
+            var receiptText = "Спасибо за покупку! \n";
             receiptText += "==== Чек ====\n";
             receiptText += "Товар: " + document.getElementById("productPlaceholder").textContent + "\n";
             receiptText += "Цена: " + document.getElementById("pricePlaceholder").textContent + "\n";
@@ -38,9 +38,9 @@
             receiptText += "Номер телефона: " + document.getElementById("phone").value + "\n";
             receiptText += "Согласие на СМС: " + (document.getElementById("smsConsent").checked ? "Да" : "Нет") + "\n";
             receiptText += "Тип доставки: " + document.querySelector('input[name="delivery"]:checked').value + "\n";
-            receiptText += "Адрес:\n " + getAddress() + "\n";
-            receiptText += "================\n";
-            receiptText += "Ждём вас снова. С любовью ваш tech.inc.\n";
+            receiptText += "Адрес: " + getAddress() + "\n";
+            receiptText += "================ \n";
+            receiptText += "Ждём вас снова! Ваш любимый tech.inc \n";
 
             var blob = new Blob([receiptText], { type: 'text/plain' });
             var link = document.createElement("a");
