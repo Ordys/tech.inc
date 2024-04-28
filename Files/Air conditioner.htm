@@ -1,0 +1,116 @@
+<html>
+<head>
+<Title>Кондиционер</Title> 
+<link rel="stylesheet" type="text/css" href="goodstyle.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<P ALIGN="center">
+    <a href="../index.htm"> <img src="../Pictures/logoss.png" width="200" height="75">
+       </a>
+    </P>
+         <p align="left"> <font face="Franklin Gothic Medium">
+    <H1>Кондиционер</H1>
+    </font> </p>    
+    <table border="0" p align="left" width="1100">
+        <tr valign="top">
+	<td>
+    <p align="left"><img src="../Pictures/Кондиционер.jpg" width="450" height="450">
+    </p>
+            </td>
+<td>
+ <p align="center">
+     Ваш дом – ваше убежище!
+     Хотите, чтобы ваш дом был местом, куда хочется возвращаться каждый день? Тогда вам нужен кондиционер!
+     Кондиционер – это не просто устройство для охлаждения воздуха. Это ваш личный климат-контроль, который создаст идеальную атмосферу в любом помещении.
+     С кондиционером вы сможете наслаждаться прохладой даже в самый жаркий день. Он обеспечит вам комфорт и уют, а также поможет сохранить здоровье.
+     Кондиционер легко устанавливается и не требует особого ухода. Он экономичен и надёжен.
+     Не позволяйте жаре испортить вам настроение! Приобретите кондиционер и наслаждайтесь прохладой каждый день!
+    </p> 
+    <BR></BR>
+      <font size="4">       
+  <p align="right">      Цвет: Белый
+          </p>
+</font>
+               
+        </td>
+        </tr>
+    </table>
+    <br> <BR> <BR>
+    
+    <table border="1" p align="center" cellpadding="20">
+        <tr>
+        <td>
+           <font size="7">
+            <a href="choose.htm?product=Кондиционер&price=6995.00 ₽ ">Купить</a>
+
+        </font> 
+
+        </tr>   
+    </table>
+    <table border="0" p align="center" cellpadding="20">
+    <tr>
+        <td>
+        
+        <font size="5">
+         6 995,00 руб.
+        </font>
+        
+        
+        
+        
+        
+        
+        </td>
+        </tr>
+    
+    </table>
+    </BR>
+    </BR>
+    <div id="priceChartContainer">
+        <canvas id="priceChart"></canvas>
+      </div>
+      
+    <script>
+        var priceChanges = [
+            { date: '2024-01-01', price: 8430 },
+            { date: '2024-02-01', price: 8178 },
+            { date: '2024-03-01', price: 5761 },
+            { date: '2024-04-01', price: 7924 },
+            { date: '2024-05-01', price: 6100 },
+            { date: '2024-06-01', price: 6995 }
+        ];
+    
+        var ctx = document.getElementById('priceChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line', 
+            data: {
+                labels: priceChanges.map(item => item.date), 
+                datasets: [{
+                    label: 'Цена', 
+                    data: priceChanges.map(item => item.price), 
+                    fill: false, 
+                    borderColor: 'rgba(255, 99, 132, 1)', 
+                    borderWidth: 2, 
+                    pointRadius: 4, 
+                    pointBackgroundColor: 'rgba(255, 99, 132, 1)', 
+                    pointBorderColor: 'rgba(255, 99, 132, 1)', 
+                    pointHoverRadius: 6 
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: false 
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+    
+    
+       
+</body>
+</html>

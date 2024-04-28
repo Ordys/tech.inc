@@ -1,0 +1,135 @@
+<html>
+<head>
+<Title>Стиральная машина</Title> 
+<link rel="stylesheet" type="text/css" href="goodstyle.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+<P ALIGN="center">
+    <a href="../index.htm"> <img src="../Pictures/logoss.png" width="200" height="75">
+       </a>
+    </P>
+    <p align="left"> <font face="Franklin Gothic Medium">
+    <H1>Стиральная машина</H1>
+    </font> </p>    
+    <table border="0" p align="left" width="1100">
+        <tr valign="top">
+	<td>
+    <p align="left"><img src="../Pictures/Стиральная машина.jpg" width="450" height="450">
+    </p>
+            </td>
+<td>
+ <p align="center">
+        Ваша одежда заслуживает лучшего ухода! Представляем вам стиральную машину, которая превратит процесс стирки в удовольствие.
+        Наша стиральная машина — это сочетание передовых технологий и удобства использования. Она бережно заботится о вашей одежде, сохраняя её цвет и форму.
+        С нашей стиральной машиной вы сможете забыть о проблемах со стиркой. Она эффективно удаляет даже самые сложные пятна, обеспечивая безупречную чистоту вашей одежды.
+        Не упустите возможность приобрести стиральную машину, которая сделает вашу жизнь проще и комфортнее. Подарите своей одежде заботу, которую она заслуживает!
+    </p> 
+    <BR></BR>
+      <font size="4">       
+  <p align="right">      Цвет: Металлик
+          </p>
+</font>
+               
+        </td>
+        </tr>
+    </table>
+    <br> <BR> <BR>
+    
+    <table border="1" p align="center" cellpadding="20">
+        <tr>
+        <td>
+           <font size="7">
+            <a href="choose.htm?product=Стиральная машина&price=20300.00 ₽">Купить</a>
+        </font> 
+
+        </tr>   
+    </table>
+    <table border="0" p align="center" cellpadding="20">
+    <tr>
+        <td>
+        
+        <font size="5">
+
+             20 300,00 руб.
+
+            </font>
+        
+        
+        
+        
+        
+        
+        </td>
+        
+        
+        
+        </tr>
+    
+    </table>
+    </BR>
+    </BR>
+    
+    <div id="priceChartContainer">
+        <canvas id="priceChart"></canvas>
+      </div>
+
+
+ <script>
+        var priceChanges = [
+            { date: '2024-01-01', price: 17175 },
+            { date: '2024-02-01', price: 23765 },
+            { date: '2024-03-01', price: 16465 },
+            { date: '2024-04-01', price: 21362 },
+            { date: '2024-05-01', price: 18666 },
+            { date: '2024-06-01', price: 20300 }
+        ];
+    
+        var ctx = document.getElementById('priceChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line', 
+            data: {
+                labels: priceChanges.map(item => item.date), 
+                datasets: [{
+                    label: 'Цена', 
+                    data: priceChanges.map(item => item.price), 
+                    fill: false, 
+                    borderColor: 'rgba(255, 99, 132, 1)', 
+                    borderWidth: 2, 
+                    pointRadius: 4, 
+                    pointBackgroundColor: 'rgba(255, 99, 132, 1)', 
+                    pointBorderColor: 'rgba(255, 99, 132, 1)', 
+                    pointHoverRadius: 6 
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: false 
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

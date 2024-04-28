@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tech.inc</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
+    <script src="scrollToTop.js"></script>
+    <script src="index.js"></script>
+    <script src="login.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+        <a href="index.htm">
+            <img src="Pictures/logoss.png" width="200" height="75">
+        </a>
+    </a>
+    <div id="login-container">
+        <div id="user-info-container" class="user-info" style="display: none;"></div>
+        <button id="logout-button" class="login-button" style="display: none;" onclick="logout()">Выйти из аккаунта</button>
+        <button id="login-button" class="login-button" onclick="location.href='login.html';">Ввойти в аккаунт</button>
+    </div>
+    </div>
+        <div class="content">
+            <h1>Добро пожаловать на сайт tech.inc!</h1>
+            <table class="product-table">
+                <caption>Товары</caption>
+                <thead>
+                    <tr>
+                        <th>Изображение</th>
+                        <th>Название</th>
+                        <th>Цена</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="window.location.href='Files/Fridge.htm'">
+                        <td><a href="Files/Fridge.htm"><img src="Pictures/Холодильник.jpg" width="100" height="100"></a></td>
+                        <td><a href="Files/Fridge.htm">Холодильник</a></td>
+                        <td>29 990,00 руб.</td>
+                    </tr>
+                    <tr onclick="window.location.href='Files/Washing%20machine.htm'">
+                        <td><a href="Files/Washing%20machine.htm"><img src="Pictures/Стиральная машина.jpg" width="100" height="100"></a></td>
+                        <td><a href="Files/Washing machine.htm">Стиральная машина</a></td>
+                        <td>20 300,00 руб.</td>
+                    </tr>
+                    <tr onclick="window.location.href='Files/Dishwasher.htm'">
+                        <td><a href="Files/Dishwasher.htm"><img src="Pictures/Посудомоечная машина.jpg" width="100" height="100"></a></td>
+                        <td><a href="Files/Dishwasher.htm">Посудомоечная машина</a></td>
+                        <td>25 990,00 руб.</td>
+                    </tr>
+                    <tr onclick="window.location.href='Files/Water%20heater.htm'">
+                        <td><a href="Files/Water%20heater.htm"><img src="Pictures/Водонагреватель.jpg" width="100" height="100"></a></td>
+                        <td><a href="Files/Water heater.htm">Водонагреватель</a></td>
+                        <td>16 680,00 руб.</td>
+                    </tr>
+                    <tr onclick="window.location.href='Files/Air%20conditioner.htm'">
+                        <td><a href="Files/Air%20conditioner.htm"><img src="Pictures/Кондиционер.jpg" width="100" height="100"></a></td>
+                        <td><a href="Files/Air conditioner.htm">Кондиционер</a></td>
+                        <td>6 995,00 руб.</td>
+                    </tr>
+                    <tr onclick="window.location.href='Files/Kitchen%20stove.htm'">
+                        <td><a href="Files/Kitchen%20stove.htm"><img src="Pictures/Кухонная плита.jpg" width="100" height="100"></a></td>
+                        <td><a href="Files/Kitchen stove.htm">Кухонная плита</a></td>
+                        <td>16 990,00 руб.</td>
+                    </tr>
+                    <tr onclick="window.location.href='Files/Drying%20cabinet.htm'">
+                        <td><a href="Files/Drying%20cabinet.htm"><img src="Pictures/Сушильный шкаф.jpg" width="100" height="100"></a></td>
+                        <td><a href="Files/Drying cabinet.htm">Сушильный шкаф</a></td>
+                        <td>24 790,00 руб.</td>
+                    </tr>
+                    <tr onclick="window.location.href='Files/Freezer.htm'">
+                        <td><a href="Files/Freezer.htm"><img src="Pictures/Морозильная камера.jpg" width="100" height="100"></a></td>
+                        <td><a href="Files/Freezer.htm">Морозильная камера</a></td>
+                        <td>21 995,00 руб.</td>
+                    </tr>
+                    <tr onclick="window.location.href='Files/Microwave.htm'">
+                        <td><a href="Files/Microwave.htm"><img src="Pictures/Микроволновая печь.jpg" width="100" height="100"></a></td>
+                        <td><a href="Files/Microwave.htm">Микроволновая печь</a></td>
+                        <td>8 990,00 руб.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button onclick="scrollToTop()" id="btnScrollToTop" title="Наверх">↑</button>
+    </div>
+
+    <div class="meme">
+
+    <a href = "meme.html"> <img src="Pictures/папич.gif" width=300px> </a>
+    <br>
+    <audio controls>
+        <source src="Pictures/vika.mp3">
+    </audio>
+</div>
+
+<footer class="footer">
+    <p>
+        Автор сайта: Рыбаков Данила Сергеевич, студент гр. АБ-107
+        <br>
+        <a href="https://vk.com/ordissius">Страница ВК создателя</a>
+    </p>
+    <p>2024г. Все права защищены и всё такое.</p>
+</footer>
+
+</body>
+</html>

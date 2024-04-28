@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход на сайт tech.inc</title>
+    <link rel="stylesheet" href="loginstyle.css">
+</head>
+
+<body>
+
+
+    <div class="login-container">
+
+        <div class="logo">
+        <a href="index.htm">
+            <img src="Pictures/logoss.png" width="200" height="75">
+        </a>
+        </div>
+
+
+        <h2>ВХОД В АККАУНТ</h2>
+        <form id="login-form">
+
+            <label for="username">Логин:</label><br>
+            <input type="text" id="username" name="username" placeholder="Логин" required><br>
+            <label for="password">Пароль:</label><br>
+            <input type="password" id="password" name="password" placeholder="Пароль" required><br><br>
+            <button type="submit">Вход</button>
+            
+            <br>
+        </form>
+        <p id="login-error" class="error-message"></p>
+    </div>
+
+    <script src="login.js"></script>
+
+    </div>
+
+
+</body>
+</html>

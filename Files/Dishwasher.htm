@@ -1,0 +1,125 @@
+<html>
+<head>
+<Title>Посудомоечная машина</Title> 
+<link rel="stylesheet" type="text/css" href="goodstyle.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<P ALIGN="center">
+    <a href="../index.htm"> <img src="../Pictures/logoss.png" width="200" height="75">
+       </a>
+    </P>
+ <p align="left"> <font face="Franklin Gothic Medium">
+    <H1>Посудомоечная машина</H1>
+    </font> </p>    
+    <table border="0" p align="left" width="1100">
+        <tr valign="top">
+	<td>
+    <p align="left"><img src="../Pictures/Посудомоечная машина.jpg" width="450" height="450">
+    </p>
+            </td>
+<td>
+ <p align="center">
+
+    Мечтаете о том, чтобы ваша посуда всегда была чистой и блестящей, а вы могли больше времени проводить с семьёй? Тогда вам нужна наша посудомоечная машина!
+    Наша посудомоечная машина — это надёжный помощник на кухне, который возьмёт на себя всю работу по мытью посуды. Вам больше не придётся тратить время и силы на ручное мытьё. Просто загрузите посуду в машину, выберите программу и наслаждайтесь свободным временем.
+    Наша посудомоечная машина оснащена всеми необходимыми функциями для эффективного и бережного мытья посуды. Она легко справится с любыми загрязнениями и обеспечит вашей посуде идеальную чистоту.
+    Не упустите возможность приобрести посудомоечную машину, которая сделает вашу жизнь проще и комфортнее. Позвольте себе больше времени на общение с близкими людьми!
+    </p> 
+    <BR></BR>
+      <font size="4">       
+  <p align="right">      Цвет: Металлик
+          </p>
+</font>
+               
+        </td>
+        </tr>
+    </table>
+    <br> <BR> <BR>
+    
+    <table border="1" p align="center" cellpadding="20">
+        <tr>
+        <td>
+           <font size="7">
+            <a href="choose.htm?product=Посудомоечная машина&price=25990.00 ₽">Купить</a>
+        </font> 
+
+        </tr>   
+    </table>
+    <table border="0" p align="center" cellpadding="20">
+    <tr>
+        <td>
+        
+        <font size="5">
+              
+25 990,00 руб.
+
+            </font>
+        
+        
+        
+        
+        
+        
+        </td>
+        
+        
+        
+        </tr>
+    
+    </table>
+    </BR>
+    </BR>
+
+    
+    <div id="priceChartContainer">
+        <canvas id="priceChart"></canvas>
+      </div>
+       
+    <script>
+        // Данные изменения цен для товара с ценой 6995
+        var priceChanges = [
+            { date: '2024-01-01', price: 24522 },
+            { date: '2024-02-01', price: 31887 },
+            { date: '2024-03-01', price: 31177 },
+            { date: '2024-04-01', price: 22137 },
+            { date: '2024-05-01', price: 21987 },
+            { date: '2024-06-01', price: 25990 }
+            // Добавьте больше данных по мере необходимости
+        ];
+    
+        // Инициализация данных для графика
+        var ctx = document.getElementById('priceChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line', // Тип графика - линейный
+            data: {
+                labels: priceChanges.map(item => item.date), // Даты изменений как метки на графике
+                datasets: [{
+                    label: 'Цена', // Название набора данных
+                    data: priceChanges.map(item => item.price), // Данные изменения цен
+                    fill: false, // Не заливать область под кривой
+                    borderColor: 'rgba(255, 99, 132, 1)', // Цвет линии графика
+                    borderWidth: 2, // Ширина линии графика
+                    pointRadius: 4, // Радиус точек
+                    pointBackgroundColor: 'rgba(255, 99, 132, 1)', // Цвет точек
+                    pointBorderColor: 'rgba(255, 99, 132, 1)', // Цвет рамки точек
+                    pointHoverRadius: 6 // Радиус точек при наведении
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: false // Начало шкалы Y не обязательно с нуля
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+    
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" type="text/css" href="choose.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        window.onload = function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var productName = urlParams.get('product');
+            var productPrice = urlParams.get('price');
+            var productPlaceholder = document.getElementById("productPlaceholder");
+            var pricePlaceholder = document.getElementById("pricePlaceholder");
+            if (productName && productPrice && productPlaceholder && pricePlaceholder) {
+                productPlaceholder.textContent = productName;
+                pricePlaceholder.textContent = productPrice;
+            }
+
+            var firstName = localStorage.getItem('firstName');
+            var lastName = localStorage.getItem('lastName');
+            
+            if (firstName && lastName) {
+                document.getElementById('surname').value = lastName;
+                document.getElementById('name').value = firstName;
+            }
+        };
+
+        function generateReceipt() {
+            var receiptText = "==== Чек ====\n";
+            receiptText += "Товар: " + document.getElementById("productPlaceholder").textContent + "\n";
+            receiptText += "Цена: " + document.getElementById("pricePlaceholder").textContent + "\n";
+            receiptText += "Фамилия: " + document.getElementById("surname").value + "\n";
+            receiptText += "Имя: " + document.getElementById("name").value + "\n";
+            receiptText += "Отчество: " + document.getElementById("patronymic").value + "\n";
+            receiptText += "Номер телефона: " + document.getElementById("phone").value + "\n";
+            receiptText += "Согласие на СМС: " + (document.getElementById("smsConsent").checked ? "Да" : "Нет") + "\n";
+            receiptText += "Тип доставки: " + document.querySelector('input[name="delivery"]:checked').value + "\n";
+            receiptText += "Адрес: " + getAddress() + "\n";
+
+            var blob = new Blob([receiptText], { type: 'text/plain' });
+            var link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "receipt.txt";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function getAddress() {
+            var address = "";
+            address += "Страна: " + document.getElementById("country").value + "\n";
+            address += "Область/Край: " + document.getElementById("region").value + "\n";
+            address += "Город: " + document.getElementById("city").value + "\n";
+            address += "Индекс: " + document.getElementById("zip").value + "\n";
+            address += "Улица: " + document.getElementById("street").value + "\n";
+            address += "Дом: " + document.getElementById("house").value + "\n";
+            address += "Квартира: " + document.getElementById("apartment").value + "\n";
+            return address;
+        }
+
+        function handleFormSubmit(event) {
+            generateReceipt();
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="logo">
+        <a href="../index.htm">
+            <img src="../Pictures/logoss.png" width="200" height="75">
+        </a>
+    </div>
+    <div class="foundation">
+        <h1>Введите данные для оформления заказа.</h1>
+        <form action="thanks.htm" onsubmit="return handleFormSubmit(event)">
+            Товар: <span id="productPlaceholder">...</span><br><br>
+            Цена: <span id="pricePlaceholder">...</span><br><br>
+            Фамилия:<br>
+            <input type="text" id="surname" name="Фамилия" size="30" required><br><br>
+            Имя:<br>
+            <input type="text" id="name" name="Имя" size="30" required><br><br>
+            Отчество, если есть:<br>
+            <input type="text" id="patronymic" name="Отчество" size="30"><br><br>
+            Номер телефона:<br>
+            <input type="text" id="phone" name="Номер телефона" size="30" required><br><br>
+            Хотите получать СМС-уведомления о статусе доставки товара?<br>
+            <input type="checkbox" id="smsConsent" name="Согласие" value="Согласие"> Да<br><br>
+            Выберите, куда доставить:<br>
+            <input type="radio" name="delivery" value="На почтовое отделение" required> На ближайшее почтовое отделение<br>
+            <input type="radio" name="delivery" value="Курьер" required> Доставка курьером на дом<br><br>
+            Ваш адрес:<br><br>
+            Страна:<br>
+            <input type="text" id="country" name="Страна" size="30" required><br><br>
+            Область/Край:<br>
+            <input type="text" id="region" name="Область/Край" size="30" required><br><br>
+            Город:<br>
+            <input type="text" id="city" name="Город" size="30" required><br><br>
+            Индекс:<br>
+            <input type="text" id="zip" name="Индекс" size="30" required><br><br>
+            Улица:<br>
+            <input type="text" id="street" name="Улица" size="30" required><br><br>
+            Дом:<br>
+            <input type="text" id="house" name="Дом" size="30" required><br><br>
+            Квартира:<br>
+            <input type="text" id="apartment" name="Квартира" size="30" required><br><br>
+            <input type="submit" value="Оформить заказ">
+        </form>
+    </div>
+
+    <div class="upscroll">
+        <button onclick="scrollToTop()" id="btnScrollToTop" title="Наверх">↑</button>
+    </div>
+</body>
+</html>

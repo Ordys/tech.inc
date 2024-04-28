@@ -1,0 +1,117 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+input[type="submit"] {
+    background-color: #0056b3;
+}
+
+input[type="submit"] {
+    background-color: #0056b3;
+}
+
+
+input[type="checkbox"] {
+
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+  }
+ 
+ 
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+  }
+  
+ 
+  input[type="radio"]:checked {
+    background-color: #2196F3;
+  }
+  
+ 
+  input[type="radio"]::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  
+ 
+  input[type="radio"]:checked::before {
+    background-color: #fff;
+  }
+
+  select {
+    width: 35%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+ 
+#btnScrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+
+#btnScrollToTop:hover {
+  opacity: 0.8;
+}
