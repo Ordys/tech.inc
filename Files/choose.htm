@@ -38,7 +38,7 @@
             receiptText += "Номер телефона: " + document.getElementById("phone").value + "\n";
             receiptText += "Согласие на СМС: " + (document.getElementById("smsConsent").checked ? "Да" : "Нет") + "\n";
             receiptText += "Тип доставки: " + document.querySelector('input[name="delivery"]:checked').value + "\n";
-            receiptText += "Адрес: " + getAddress() + "\n";
+            receiptText += "Адрес: \n" + getAddress() + "\n";
             receiptText += "================ \n";
             receiptText += "Ждём вас снова! Ваш любимый tech.inc \n";
 
